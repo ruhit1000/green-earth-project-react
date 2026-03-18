@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react';
 import CategorySelection from '../CategorySelection/CategorySelection';
+import AllPlantsContainer from '../AllPlantsContainer/AllPlantsContainer';
 const categoriesPromise = fetch('https://openapi.programming-hero.com/api/categories').then(res => res.json())
+const allPlantsPromise = fetch('https://openapi.programming-hero.com/api/plants').then(res => res.json())
 
 const ChooseTrees = () => {
     return (
@@ -9,6 +11,9 @@ const ChooseTrees = () => {
             <div className='grid grid-cols-1 lg:grid-cols-6 gap-7'>
                 <Suspense fallback={<span className="loading loading-spinner text-success block mx-auto"></span>}>
                     <CategorySelection categoriesPromise={categoriesPromise}></CategorySelection>
+                </Suspense>
+                <Suspense fallback={<span className="loading loading-spinner text-success block mx-auto"></span>}>
+                    <AllPlantsContainer allPlantsPromise={allPlantsPromise}></AllPlantsContainer>
                 </Suspense>
             </div>
         </div>
