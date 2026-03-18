@@ -13,11 +13,6 @@ const ChooseTrees = () => {
         setSelectedCategory(id)
     }
 
-    // let categorizedPlantsPromise = fetch
-    // if (selectedCategory !== null) {
-    //     categorizedPlantsPromise = fetch(`https://openapi.programming-hero.com/api/category/${selectedCategory}`)
-    // }
-
     return (
         <div className='w-[95%] md:container mx-auto my-10 md:my-16'>
             <h2 className='text-center font-semibold text-3xl mb-10'>Choose Your Trees</h2>
