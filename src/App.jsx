@@ -5,10 +5,11 @@ import AboutCampaign from './Components/AboutCampaign/AboutCampaign';
 import OurImpact from './Components/OurImpact/OurImpact';
 import PlantTree from './Components/PlantTree/PlantTree';
 import CopyRight from './Components/CopyRight/CopyRight';
+import ChooseTrees from './Components/ChooseTrees/ChooseTrees';
 
 const App = () => {
   return (
-    <body className='bg-[#F0FDF4]'>
+    <div className='bg-[#F0FDF4]'>
       <header>
         <nav>
           <Navbar></Navbar>
@@ -19,6 +20,10 @@ const App = () => {
       </header>
 
       <main>
+        <section>
+          <ChooseTrees></ChooseTrees>
+        </section>
+
         <section>
           <AboutCampaign></AboutCampaign>
         </section>
@@ -34,7 +39,7 @@ const App = () => {
       <footer>
         <CopyRight></CopyRight>
       </footer>
-    </body>
+    </div>
   );
 };
 
